@@ -2,4 +2,5 @@ requests
 ipykernel
 python-dotenv
 anthropic
+openai
 pydantic
