@@ -1,9 +1,9 @@
-# PersonalShopperAI
+# PersonalShopperAI 🛒
 
 Creating a Personal Shopper AI Agent. Details TBD
 
 
-## 🧠🌩️ Brainstorming the Process
+## Brainstorming the Process 🧠🌩
 
 1) Data Foundations
     * Design clothing database schema
@@ -35,7 +35,8 @@ Creating a Personal Shopper AI Agent. Details TBD
         > Future concern: What if something is on sale right now?
 
 
-### Scalable Clothing DataBase Schema `scalable_clothing_db_schema.sql`
+### Scalable Clothing DataBase Schema 📈
+💻 `scalable_clothing_db_schema.sql` 
 
 Key considerations when designing a scalable database schema for this project include:
 - Flexible Attribute System:
@@ -55,7 +56,9 @@ Key considerations when designing a scalable database schema for this project in
     * Detailed interaction tracking
     * Supports personalization at scale
 
-### E-Commerce Data Pipeline `ecommerce_data_pipeline.py`
+### E-Commerce Data Pipeline 🪠
+
+💻 `ecommerce_data_pipeline.py` 
 
 This pipeline was deesigned to efficiently populate the database with synthetic data. First, the pipeline will help generate realistic test data for the initial development of a working product. Then I will shift to adding real data sources using a multi-step approach that combines web scraping, API usage, and data processing. 
 - Start with Synthetic Data:
