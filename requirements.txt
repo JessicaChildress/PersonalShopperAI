@@ -4,3 +4,15 @@ python-dotenv
 anthropic
 openai
 pydantic
+pandas
+numpy
+bs4
+requests
+json
+sqlalchemy
+faker
+datetime
+logging
+concurrent.futures
+time
+typing
