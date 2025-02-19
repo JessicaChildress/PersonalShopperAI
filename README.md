@@ -3,7 +3,7 @@
 Creating a Personal Shopper AI Agent. Details TBD
 
 
-## Brainstorming the Process
+## 🧠🌩️ Brainstorming the Process
 
 1) Data Foundations
     * Design clothing database schema
