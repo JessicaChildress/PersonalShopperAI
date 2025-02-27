@@ -3,6 +3,7 @@ import numpy as np
 from bs4 import BeautifulSoup
 import requests
 import json
+import psycopg2
 from sqlalchemy import create_engine
 from faker import Faker
 from datetime import datetime
