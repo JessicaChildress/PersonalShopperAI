@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import requests
 import json
 import psycopg2
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine 
 from faker import Faker
 from datetime import datetime
 import logging
@@ -144,5 +144,6 @@ class ClothingDataPipeline:
 
 if __name__ == "__main__":
     # Usage example
+
     pipeline = ClothingDataPipeline('postgresql://username:password@localhost:5432/clothing_db')
     pipeline.run_pipeline(['synthetic'])  # Start with synthetic data
