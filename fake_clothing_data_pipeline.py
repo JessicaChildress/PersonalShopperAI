@@ -8,6 +8,7 @@ from sqlalchemy import create_engine
 from faker import Faker
 from datetime import datetime
 import logging
+import random
 import concurrent.futures
 import time
 from typing import List, Dict, Any
@@ -48,16 +49,23 @@ class FakeClothingDataPipeline():
         """
         # Generate products
         products = []
+        # creates in row in the products table 
+        # 
         for i in range(num_records):
+            base_price = round(random.uniform(10, 150), 2)
+            discounted_price = base_price * (random.randint(0, 75) / 100)
             products.append({
-                'product_id': i,
-                'name': f"{self.fake.color()} {self.fake.word()} {['Dress', 'Shirt', 'Pants', 'Jacket'][i % 4]}",
-                'brand_id': np.random.randint(1, 21),
-                'base_price': round(np.random.uniform(20, 200), 2),
-                'current_price': round(np.random.uniform(15, 180), 2),
-                'description': self.fake.text(max_nb_chars=200),
-                'created_at': datetime.now(),
-                'updated_at': datetime.now(),
+                'ProductId': i,
+                'ProductName': {['T-shirt', 'Hoodie', 'Sweater', 'Skirt', 'Pants', 'Shorts', 'Coat', 
+                                    'Jacket', 'Blazer', 'Cardigan', 'Jeans', 'Dress', 'Polo shirt', 'Tank top', 
+                                    'Vest', 'Leggings', 'Jumpsuit', 'Pajamas', 'Romper', 'Overalls', 'Scarf', 
+                                    'Gloves', 'Boots', 'Sneakers', 'Sandals', 'Belt', 'Tie', 'Socks', 'Shirt', 
+                                    'Blouse', 'Suit jacket'][i % 31]},
+                'ProductColor': self.fake.safe_color_name(),
+                'ProductSize': {['XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL'][i % 7]},
+                'ProductRating': {[round(x * 0.1, 1) for x in range(10, 51)][i % 41]},
+                'BasePrice': base_price,
+                'DiscountedPrice': discounted_price,
                 'active': True
             })
 
